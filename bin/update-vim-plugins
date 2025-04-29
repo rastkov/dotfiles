@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Vim plugins
+vimPlugins=(
+"https://github.com/lepture/vim-jinja.git"
+"https://github.com/ctrlpvim/ctrlp.vim.git"
+"https://github.com/vim-airline/vim-airline-themes.git"
+"https://github.com/pearofducks/ansible-vim.git"
+"https://github.com/PProvost/vim-ps1.git"
+"https://github.com/jmcantrell/vim-virtualenv.git"
+"https://github.com/vim-airline/vim-airline"
+"https://github.com/davidhalter/jedi-vim.git"
+"https://github.com/davidhalter/jedi.git"
+"https://github.com/davidhalter/parso.git"
+"https://github.com/tpope/vim-commentary.git"
+"https://github.com/scrooloose/nerdtree.git"
+"https://github.com/tpope/vim-fugitive.git"
+"https://github.com/tpope/vim-surround.git"
+"https://github.com/tpope/vim-repeat.git"
+)
+
+curl -LSso ${HOME}/.vim/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+
+if [ ! -d ${HOME}/.vim/bundle ]; then
+  mkdir -p ${HOME}/.vim/bundle
+fi
+
+for repo in ${vimPlugins[@]}; do
+    repo_name=$(basename "${repo}" .git)
+    cd ${HOME}/.vim/bundle
+    if [ ! -d ${repo_name} ]; then # Doesn't exist - Install
+        echo "Installing ${repo_name}"
+        git clone ${repo}
+        echo ""
+    else
+        cd ${repo_name}
+        echo "Updating ${repo_name}"
+        git pull
+        echo ""
+    fi
+done
