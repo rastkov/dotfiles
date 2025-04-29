@@ -129,6 +129,20 @@ After setup, run:
 :Lazy sync
 ```
 
+### 7. **Nerd Font**
+
+View all fonts at [nerdfonts](https://www.nerdfonts.com/font-downloads) and install a cool font that supports everything.
+
+```bash
+mkdir -p ${HOME}/.local/share/fonts
+cd ${HOME}/.local/share/fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip
+unzip Hack.zip
+fc-cache -fv
+```
+
+Make sure you change in your terminal application (i.e. GNOME Terminal) to use that font.
+
 ---
 
 ## 🚀 How to Use
