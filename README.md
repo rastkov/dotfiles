@@ -86,7 +86,8 @@ $HOME/
 ## 🔁 Restoring on a New System
 
 ```bash
-git clone --bare git@github.com:yourusername/dotfiles.git $HOME/.dotfiles
+mkdir $HOME/.dotfiles
+git clone --bare git@github.com:rastkov/dotfiles.git $HOME/.dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
