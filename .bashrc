@@ -117,6 +117,8 @@ if ! shopt -oq posix; then
 fi
 
 # Custom settings
+export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/.local/bin
 set -o vi
 export VISUAL=vim
 
