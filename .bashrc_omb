@@ -92,6 +92,7 @@ OMB_PROMPT_SHOW_PYTHON_VENV=true  # enable
 completions=(
   git
   ssh
+  tmux
 )
 
 # Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
