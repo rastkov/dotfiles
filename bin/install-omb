@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ ! -d ${HOME}/.oh-my-bash ]; then
+  git clone https://github.com/ohmybash/oh-my-bash.git ${HOME}/.oh-my-bash
+else
+  cd ${HOME}/.oh-my-bash
+  git fetch && git pull
+fi
