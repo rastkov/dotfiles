@@ -107,6 +107,13 @@ Yes. Push/pull as you would with any other repository. Private visibility is rec
 
 ---
 
+## ✅ TO-DO 
+
+* Create an install script to automate the installation of all components.
+* Currently nvim is manually installed, as well as some requirements like nvm that's hardcoded in the `install-nodejs.sh` script.
+
+---
+
 ## 📜 License
 
 This setup is yours to customize. It is based on publicly shared practices in the Unix and Linux communities.
